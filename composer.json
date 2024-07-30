@@ -1,0 +1,17 @@
+{
+  "name": "httptools/ytdl",
+  "description": "A simple PHP library for Download Videos from YouTube, Instagram, X and etc.",
+  "type": "library",
+  "license": "MIT",
+  "autoload": {
+    "psr-4": {
+      "httptools\\": "src/"
+    }
+  },
+  "authors": [
+    {
+      "name": "Hossein Pira",
+      "email": "h3dev.pira@gmail.com"
+    }
+  ]
+}
