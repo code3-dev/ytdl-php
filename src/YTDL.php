@@ -76,6 +76,11 @@ class YTDL
     private $tiktokH265 = false;
 
     /**
+     * @var string|null Custom Accept-Language header value. Default is null.
+     */
+    private $acceptLanguage = null;
+
+    /**
      * Constructor initializes the class with a URL.
      *
      * @param string $url The URL to be used in requests.
@@ -93,7 +98,7 @@ class YTDL
      */
     public function setQuality(string $quality): void
     {
-        $allowedQualities = ['max', '2160', '1440', '1080', '720', '480', '360', '144'];
+        $allowedQualities = ['max', '2160', '1440', '1080', '720', '480', '360', '240', '144'];
         if (!in_array($quality, $allowedQualities)) {
             throw new Exception('Invalid video quality');
         }
@@ -152,6 +157,16 @@ class YTDL
     }
 
     /**
+     * Sets the custom Accept-Language header value for requests.
+     *
+     * @param string $language The custom Accept-Language header value.
+     */
+    public function setAcceptLanguage(string $language): void
+    {
+        $this->acceptLanguage = $language;
+    }
+
+    /**
      * Enables downloading only audio.
      */
     public function enableAudioOnly(): void
@@ -207,6 +222,7 @@ class YTDL
         $this->tiktokH265 = true;
     }
 
+
     /**
      * Sends the configured request to the API and returns the response.
      *
@@ -218,10 +234,17 @@ class YTDL
 
         $client->Url('https://api.cobalt.tools/api/json');
         $client->Method('POST');
-        $client->Headers([
+
+        $headers = [
             "Accept: application/json",
             "Content-Type: application/json"
-        ]);
+        ];
+
+        if ($this->acceptLanguage !== null) {
+            $headers[] = "Accept-Language: " . $this->acceptLanguage;
+        }
+
+        $client->Headers($headers);
         $client->Timeout(0);
 
         $data = [

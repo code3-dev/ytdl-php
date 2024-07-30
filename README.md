@@ -125,6 +125,13 @@ Enables converting Twitter gifs to .gif format.
 
 Enables preferring 1080p h265 videos for TikTok.
 
+### `setAcceptLanguage(string $language): void`
+
+Sets the custom Accept-Language header value for requests.
+
+- **Parameters:**
+  - `$language` (string): The custom Accept-Language header value.
+
 ### `sendRequest(): array`
 
 Sends the configured request to the API and returns the response.
