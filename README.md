@@ -13,10 +13,10 @@ A simple PHP library for downloading videos from YouTube, Instagram, X, and more
 
 ## Installation
 
-To install the `httptools/ytdl` library, you need to use Composer. Run the following command:
+To install the `pira/ytdl` library, you need to use Composer. Run the following command:
 
 ```bash
-composer require httptools/ytdl
+composer require pira/ytdl
 ```
 
 ## Usage
@@ -26,7 +26,7 @@ After installing the library, you can start using it in your PHP project. Here's
 ```php
 <?php
 
-use httptools\YTDL;
+use pira\YTDL;
 
 require_once 'vendor/autoload.php';
 

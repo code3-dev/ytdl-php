@@ -1,6 +1,6 @@
 <?php
 
-namespace httptools;
+namespace pira;
 
 /**
  * Client - A simple PHP Class for making HTTP requests using cURL
