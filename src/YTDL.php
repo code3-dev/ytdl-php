@@ -208,14 +208,6 @@ class YTDL
     }
 
     /**
-     * Disables preferring 1080p h265 videos for TikTok.
-     */
-    public function disableTiktokH265(): void
-    {
-        $this->tiktokH265 = false;
-    }
-
-    /**
      * Sends the configured request to the API and returns the response.
      *
      * @return array An associative array containing the status and data of the response.

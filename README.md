@@ -125,10 +125,6 @@ Enables converting Twitter gifs to .gif format.
 
 Enables preferring 1080p h265 videos for TikTok.
 
-### `disableTiktokH265(): void`
-
-Disables preferring 1080p h265 videos for TikTok.
-
 ### `sendRequest(): array`
 
 Sends the configured request to the API and returns the response.
