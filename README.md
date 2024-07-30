@@ -143,7 +143,7 @@ Sends the configured request to the API and returns the response.
 
 ## Supported Services
 
-This list is not final and keeps expanding over time. If support for a service you want is missing, create an issue (or a pull request 👀).
+This list is not final and keeps expanding over time.
 
 | service                        | video + audio | only audio | only video | metadata | rich file names |
 | :--------                      | :-----------: | :--------: | :--------: | :------: | :-------------: |
