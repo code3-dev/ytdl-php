@@ -7,6 +7,7 @@ A simple PHP library for downloading videos from YouTube, Instagram, X, and more
 - [Installation](#installation)
 - [Usage](#usage)
 - [Methods](#methods)
+- [Response Body](#response-body-variables)
 - [Supported Services](#supported-services)
 - [License](#license)
 - [Contact](#contact)
@@ -139,45 +140,67 @@ Sends the configured request to the API and returns the response.
 - **Returns:**
   - An associative array containing the status and data of the response.
 - **Throws:**
+
   - `Exception` if there is an error in sending the request.
+  
+## response body variables
+
+| key          | type     | variables                                                   |
+| :----------- | :------- | :---------------------------------------------------------- |
+| `status`     | `string` | `error / redirect / stream / success / rate-limit / picker` |
+| `text`       | `string` | various text, mostly used for errors                        |
+| `url`        | `string` | direct link to a file or a link to cobalt's live render     |
+| `pickerType` | `string` | `various / images`                                          |
+| `picker`     | `array`  | array of picker items                                       |
+| `audio`      | `string` | direct link to a file or a link to cobalt's live render     |
+
+## picker item variables
+
+item type: `object`
+
+| key     | type     | variables                                               | description                            |
+| :------ | :------- | :------------------------------------------------------ | :------------------------------------- |
+| `type`  | `string` | `video / photo / gif`                                   | used only if `pickerType` is `various` |
+| `url`   | `string` | direct link to a file or a link to cobalt's live render |                                        |
+| `thumb` | `string` | item thumbnail that's displayed in the picker           | used for `video` and `gif` types       |
 
 ## Supported Services
 
 This list is not final and keeps expanding over time.
 
 | service                        | video + audio | only audio | only video | metadata | rich file names |
-| :--------                      | :-----------: | :--------: | :--------: | :------: | :-------------: |
-| bilibili.com & bilibili.tv     | ✅            | ✅         | ✅         | ➖         | ➖              |
-| dailymotion                    | ✅            | ✅         | ✅         | ✅         | ✅              |
-| instagram posts & reels        | ✅            | ✅         | ✅         | ➖         | ➖              |
-| facebook videos                | ✅            | ❌         | ❌         | ➖         | ➖              |
-| loom                           | ✅            | ❌         | ✅         | ✅         | ➖              |
-| ok video                       | ✅            | ❌         | ✅         | ✅         | ✅              |
-| pinterest                      | ✅            | ✅         | ✅         | ➖         | ➖              |
-| reddit                         | ✅            | ✅         | ✅         | ❌         | ❌              |
-| rutube                         | ✅            | ✅         | ✅         | ✅         | ✅              |
-| snapchat stories & spotlights  | ✅            | ✅         | ✅         | ➖         | ➖              |
-| soundcloud                     | ➖            | ✅         | ➖         | ✅         | ✅              |
-| streamable                     | ✅            | ✅         | ✅         | ➖         | ➖              |
-| tiktok                         | ✅            | ✅         | ✅         | ❌         | ❌              |
-| tumblr                         | ✅            | ✅         | ✅         | ➖         | ➖              |
-| twitch clips                   | ✅            | ✅         | ✅         | ✅         | ✅              |
-| twitter/x                      | ✅            | ✅         | ✅         | ➖         | ➖              |
-| vimeo                          | ✅            | ✅         | ✅         | ✅         | ✅              |
-| vine archive                   | ✅            | ✅         | ✅         | ➖         | ➖              |
-| vk videos & clips              | ✅            | ❌         | ✅         | ✅         | ✅              |
-| youtube videos, shorts & music | ✅            | ✅         | ✅         | ✅         | ✅              |
+| :----------------------------- | :-----------: | :--------: | :--------: | :------: | :-------------: |
+| bilibili.com & bilibili.tv     |      ✅       |     ✅     |     ✅     |    ➖    |       ➖        |
+| dailymotion                    |      ✅       |     ✅     |     ✅     |    ✅    |       ✅        |
+| instagram posts & reels        |      ✅       |     ✅     |     ✅     |    ➖    |       ➖        |
+| facebook videos                |      ✅       |     ❌     |     ❌     |    ➖    |       ➖        |
+| loom                           |      ✅       |     ❌     |     ✅     |    ✅    |       ➖        |
+| ok video                       |      ✅       |     ❌     |     ✅     |    ✅    |       ✅        |
+| pinterest                      |      ✅       |     ✅     |     ✅     |    ➖    |       ➖        |
+| reddit                         |      ✅       |     ✅     |     ✅     |    ❌    |       ❌        |
+| rutube                         |      ✅       |     ✅     |     ✅     |    ✅    |       ✅        |
+| snapchat stories & spotlights  |      ✅       |     ✅     |     ✅     |    ➖    |       ➖        |
+| soundcloud                     |      ➖       |     ✅     |     ➖     |    ✅    |       ✅        |
+| streamable                     |      ✅       |     ✅     |     ✅     |    ➖    |       ➖        |
+| tiktok                         |      ✅       |     ✅     |     ✅     |    ❌    |       ❌        |
+| tumblr                         |      ✅       |     ✅     |     ✅     |    ➖    |       ➖        |
+| twitch clips                   |      ✅       |     ✅     |     ✅     |    ✅    |       ✅        |
+| twitter/x                      |      ✅       |     ✅     |     ✅     |    ➖    |       ➖        |
+| vimeo                          |      ✅       |     ✅     |     ✅     |    ✅    |       ✅        |
+| vine archive                   |      ✅       |     ✅     |     ✅     |    ➖    |       ➖        |
+| vk videos & clips              |      ✅       |     ❌     |     ✅     |    ✅    |       ✅        |
+| youtube videos, shorts & music |      ✅       |     ✅     |     ✅     |    ✅    |       ✅        |
 
-| emoji   | meaning                 |
-| :-----: | :---------------------- |
-| ✅      | supported               |
-| ➖      | impossible/unreasonable |
-| ❌      | not supported           |
+| emoji | meaning                 |
+| :---: | :---------------------- |
+|  ✅   | supported               |
+|  ➖   | impossible/unreasonable |
+|  ❌   | not supported           |
 
 ### Additional Notes or Features
 
 | service    | notes or features                                                                                                    |
-| :--------  | :-----                                                                                                               |
+| :--------- | :------------------------------------------------------------------------------------------------------------------- |
 | instagram  | Supports reels, photos, and videos. Lets you pick what to save from multi-media posts.                               |
 | facebook   | Supports public accessible videos content only.                                                                      |
 | pinterest  | Supports photos, gifs, videos and stories.                                                                           |

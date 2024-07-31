@@ -5,7 +5,7 @@ namespace pira;
 use Exception;
 
 /**
- * Class YTDL
+ * Class YTDL (PHP YTDL Library)
  *
  * This class handles the configuration and sending of requests to a video downloading API.
  * It allows you to set various parameters for downloading videos or audio, such as video quality,
