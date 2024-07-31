@@ -143,7 +143,7 @@ Sends the configured request to the API and returns the response.
 
   - `Exception` if there is an error in sending the request.
   
-## response body variables
+## Response Body Variables
 
 | key          | type     | variables                                                   |
 | :----------- | :------- | :---------------------------------------------------------- |
@@ -154,7 +154,7 @@ Sends the configured request to the API and returns the response.
 | `picker`     | `array`  | array of picker items                                       |
 | `audio`      | `string` | direct link to a file or a link to cobalt's live render     |
 
-## picker item variables
+## Picker Item Variables
 
 item type: `object`
 
