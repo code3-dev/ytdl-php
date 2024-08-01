@@ -11,6 +11,19 @@ use Exception;
  * It allows you to set various parameters for downloading videos or audio, such as video quality,
  * codec, audio format, and filename pattern. The class provides methods to enable or disable specific
  * features like audio-only downloads, full audio from TikTok videos, and metadata options.
+ * 
+ * This library relies on Cobalt’s free API.
+ * 
+ * Sources:
+ * - Cobalt Code: https://github.com/imputnet/cobalt
+ * - Cobalt Site: https://cobalt.tools
+ * - Cobalt API Docs: https://github.com/imputnet/cobalt/blob/current/docs/api.md
+ * 
+ * @package pira\ytdl
+ * @version 1.5.0
+ * @license MIT License
+ * @link https://github.com/code3-dev/ytdl-php
+ * @api
  */
 
 class YTDL

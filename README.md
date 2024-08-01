@@ -2,6 +2,16 @@
 
 A simple PHP library for downloading videos from YouTube, Instagram, X, and more.
 
+[![Powered by Cobalt](https://cobalt.tools/icons/favicon.ico)](https://github.com/imputnet/cobalt)
+
+**Powered by [Cobalt](https://github.com/imputnet/cobalt)**
+
+This library relies on Cobalt’s free API.
+
+- **Cobalt Code:** [GitHub Repository](https://github.com/imputnet/cobalt)
+- **Cobalt Site:** [Cobalt Tools](https://cobalt.tools/)
+- **Cobalt API Docs:** [API Documentation](https://github.com/imputnet/cobalt/blob/current/docs/api.md)
+
 ## Table of Contents
 
 - [Installation](#installation)
@@ -143,7 +153,7 @@ Sends the configured request to the API and returns the response.
 - **Throws:**
 
   - `Exception` if there is an error in sending the request.
-  
+
 ## Response Body Variables
 
 | key          | type     | variables                                                   |
@@ -155,6 +165,8 @@ Sends the configured request to the API and returns the response.
 | `picker`     | `array`  | array of picker items                                       |
 | `audio`      | `string` | direct link to a file or a link to cobalt's live render     |
 
+Source: [Cobalt API Documentation - Response Body Variables](https://github.com/imputnet/cobalt/blob/current/docs/api.md#response-body-variables)
+
 ## Picker Item Variables
 
 item type: `object`
@@ -164,6 +176,8 @@ item type: `object`
 | `type`  | `string` | `video / photo / gif`                                   | used only if `pickerType` is `various` |
 | `url`   | `string` | direct link to a file or a link to cobalt's live render |                                        |
 | `thumb` | `string` | item thumbnail that's displayed in the picker           | used for `video` and `gif` types       |
+
+Source: [Cobalt API Documentation - Picker Item Variables](https://github.com/imputnet/cobalt/blob/current/docs/api.md#picker-item-variables)
 
 ## Supported Services
 
@@ -198,6 +212,8 @@ This list is not final and keeps expanding over time.
 |  ➖   | impossible/unreasonable |
 |  ❌   | not supported           |
 
+Source: [Cobalt - Supported Services](https://github.com/imputnet/cobalt#supported-services)
+
 ### Additional Notes or Features
 
 | service    | notes or features                                                                                                    |
@@ -214,6 +230,10 @@ This list is not final and keeps expanding over time.
 | vimeo      | Audio downloads are only available for dash.                                                                         |
 | youtube    | Supports videos, music, and shorts. 8K, 4K, HDR, VR, and high FPS videos. Rich metadata & dubs. h264/av1/vp9 codecs. |
 
+Source: [Cobalt - Additional Notes or Features per Service](https://github.com/imputnet/cobalt#additional-notes-or-features-per-service)
+
+If support for a service you want is missing, create an issue (or a pull request 👀) on [Cobalt's GitHub repository](https://github.com/imputnet/cobalt).
+
 ## License
 
 This library is licensed under the MIT License. See the [LICENSE](LICENSE) file for more details.
@@ -226,3 +246,9 @@ For any queries or issues, please contact:
 - **Email:** [h3dev.pira@gmail.com](mailto:h3dev.pira@gmail.com)
 - **Instagram**: [@h3dev.pira](https://instagram.com/h3dev.pira)
 - **Telegram:** [@h3dev](https://t.me/h3dev)
+
+## References
+
+- **Cobalt Code:** [GitHub Repository](https://github.com/imputnet/cobalt)
+- **Cobalt Site:** [Cobalt Tools](https://cobalt.tools/)
+- **Cobalt API Docs:** [API Documentation](https://github.com/imputnet/cobalt/blob/current/docs/api.md)
