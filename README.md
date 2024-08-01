@@ -1,6 +1,6 @@
 # YT-DL PHP
 
-A simple PHP library for downloading videos from YouTube, Instagram, X, and more.
+A simple PHP library for downloading videos from YouTube, Instagram, X, and more. [Cobalt](https://github.com/imputnet/cobalt)
 
 [![Powered by Cobalt](https://cobalt.tools/icons/favicon.ico)](https://github.com/imputnet/cobalt)
 
