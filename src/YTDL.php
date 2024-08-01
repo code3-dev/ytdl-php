@@ -20,7 +20,7 @@ use Exception;
  * - Cobalt API Docs: https://github.com/imputnet/cobalt/blob/current/docs/api.md
  * 
  * @package pira\ytdl
- * @version 1.6.0
+ * @version 1.7.0
  * @license MIT License
  * @link https://github.com/code3-dev/ytdl-php
  * @api https://github.com/imputnet/cobalt
