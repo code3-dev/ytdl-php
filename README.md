@@ -2,7 +2,7 @@
 
 A simple PHP library for downloading videos from YouTube, Instagram, X, and more. Powered by [Cobalt](https://github.com/imputnet/cobalt)
 
-[![Powered by Cobalt](https://cobalt.tools/icons/favicon.ico)](https://github.com/imputnet/cobalt)
+[![Powered by Cobalt](https://raw.githubusercontent.com/code3-dev/cobalt/current/web/static/favicon.png)](https://github.com/imputnet/cobalt)
 
 **Powered by [Cobalt](https://github.com/imputnet/cobalt)**
 
